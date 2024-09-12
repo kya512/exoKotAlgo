@@ -18,7 +18,15 @@ import _10_Demos_et_tests.testerEnLot
  */
 fun moyennePonderee(listeCoefVal: List<List<Number>>): Double {
     var moyenne = 0.0
-    
+    // calculer une moyenne pondérée valeur x coef / somme des coef
+    var sum_coef = 0.0
+    for(i in listeCoefVal){
+        //(listeCoefVal, [0 , 1])
+        //var = sum_coef
+        //listeCoefVal[i][0]*listeCoefVal[i][1]
+        moyenne += listeCoefVal[i][0].toDouble()*listeCoefVal[i][1].toDouble()
+        sum_coef += listeCoefVal[i][1].toDouble()
+    }
     return moyenne
 }
 
